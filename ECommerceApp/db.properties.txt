@@ -1,0 +1,5 @@
+﻿hostname=SHAYU
+dbname=ECommerceDB
+username=
+password=
+port=1433
