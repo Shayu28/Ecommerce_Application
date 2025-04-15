@@ -60,18 +60,3 @@ SELECT * FROM cart
 SELECT * FROM orders
 SELECT * FROM order_items
 
--- Create new login
-CREATE LOGIN [ecom_app] WITH PASSWORD = 'ecom';
-GO
-
--- Grant permissions
-USE [ECommerceDB];
-GO
-CREATE USER [ecom_app] FOR LOGIN [ecom_app];
-GO
-ALTER ROLE [db_owner] ADD MEMBER [ecom_app];
-GO
-
--- Run in SSMS
-SELECT name, is_disabled FROM sys.sql_logins 
-WHERE name IN ('sa', 'ecom_app');
